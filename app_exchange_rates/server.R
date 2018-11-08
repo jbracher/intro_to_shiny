@@ -3,7 +3,7 @@ library(shiny)
 # Define server logic required to draw a histogram
 shinyServer(function(input, output) {
 
-  # Hole Wechselkurse des CHF mit Euro, US-Dollar, Pfund, Dänischer Krone und türkischer Lira
+  # Hole Wechselkurse des CHF mit Euro, US-Dollar, Pfund
   wechselkurse <- dataseries::ds(c("FXR.M0.USD1", "FXR.M0.EUR1", "FXR.M0.GBP1"))
   # Benenne Achsen neu:
   colnames(wechselkurse) <- c("Zeit", "USD", "EUR", "GBP")

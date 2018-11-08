@@ -1,6 +1,6 @@
 install.packages("dataseries")
 
-# Hole Wechselkurse des CHF mit Euro, US-Dollar, Pfund, Dänischer Krone und türkischer Lira
+# Hole Wechselkurse des CHF mit Euro, US-Dollar, Pfund (Codes auf http://www.dataseries.org/)
 wechselkurse <- dataseries::ds(c("FXR.M0.USD1", "FXR.M0.EUR1", "FXR.M0.GBP1"))
 # Benenne Spalten neu:
 colnames(wechselkurse) <- c("Zeit", "USD", "EUR", "GBP")

@@ -1,9 +1,9 @@
 library(shiny)
 
-# Define UI for application that draws a histogram
+# UI für App, die Währungskurse zeigt
 shinyUI(fluidPage(
 
-  # Application title
+  # Titel
   titlePanel("Wechselkurse"),
 
   # Sidebar with a slider input for number of bins
@@ -17,7 +17,7 @@ shinyUI(fluidPage(
                          selected = 1)
     ),
 
-    # Show a plot of the generated distribution
+    # Main Panel mit Plot
     mainPanel(
        plotOutput("wechselkurse_plot")
     )

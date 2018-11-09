@@ -2,7 +2,7 @@ library(shiny)
 library(surveillance)
 library(hhh4addon)
 
-# Server-Code:
+# Server-Code
 shinyServer(function(input, output) {
 
   # lade Datensatz:

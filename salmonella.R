@@ -1,3 +1,8 @@
+## Um hhh4addon direkt von github zu installieren:
+# install.packages("devtools")
+# library(devtools)
+# install_github("jbracher/hhh4addon")
+
 # Lade packages
 library(surveillance) #enthält Daten und Modellierungsmethoden
 library(hhh4addon) # enthält Vorhersage-Methoden
@@ -23,7 +28,6 @@ fit_salmonella <- hhh4(salmonella.agona, control_salmonella)
 prediction <- predictive_moments(fit_salmonella,
                                  t_condition = zeitpunkt_vorhersage,
                                  lgt = 312 - zeitpunkt_vorhersage)
-
 # Plotte:
 plot(fit_salmonella, names = "Salmonellen") # Modell
-fanplot_prediction(prediction, add = TRUE) # Vorhersage
+fanplot_prediction(prediction, add = TRUE, interpolate_probs = FALSE) # Vorhersage
